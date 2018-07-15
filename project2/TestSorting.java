@@ -11,16 +11,18 @@ public class TestSorting {
 
 		List<Developer> result = new ArrayList<Developer>();
 
-		result.add(new Developer("mkyong",  33));
-		result.add(new Developer("alvin",  20));
-		result.add(new Developer("jason",  10));
-		result.add(new Developer("david",  15));
-		result.add(new Developer("neymar",  25));
-		result.add(new Developer("iris",  55));
+		result.add(new Developer("fatih", new BigDecimal("70000"), 33));
+		result.add(new Developer("celal", new BigDecimal("80000"), 20));
+		result.add(new Developer("ronaldo", new BigDecimal("100000"), 10));
+		result.add(new Developer("recep", new BigDecimal("20000"), 15));
+		result.add(new Developer("neymar", new BigDecimal("30000"), 25));
+		result.add(new Developer("acun", new BigDecimal("170000"), 55));
+		result.add(new Developer("sabancý", new BigDecimal("13000"), 85));
+		result.add(new Developer("koç", new BigDecimal("11000"), 45));
 		System.out.println("Before Sort ----------------------------");
 		int i =1;
 		for (Developer developer : result) {
-			System.out.println(i+" : "+developer.getName()+" "+developer.getAge());
+			System.out.println(i+" : "+developer.getName()+" "+developer.getAge()+" "+developer.getPrice()+" ");
 			i++;
 		}
 
@@ -28,17 +30,46 @@ public class TestSorting {
 		Collections.sort(result, new Comparator<Developer>() {
 			@Override
 			public int compare(Developer o1, Developer o2) {
-				System.out.println("o1 : "+o1.getAge()+"    o2 : "+o2.getAge()+" : : : : : "+(o1.getAge() - o2.getAge()));
 				return o1.getAge() - o2.getAge();
 			}
 		});
 		i =1;
-		System.out.println("After Sort ----------------------------");
+		System.out.println("After Sort for age ----------------------------");
 		for (Developer developer : result) {
-			System.out.println(i+" : "+developer.getName()+" "+developer.getAge());
+			System.out.println(i+" : "+developer.getAge()+" "+developer.getName()+" "+developer.getPrice()+" ");
 			i++;
 		}
 
+		//sort by name	
+		Collections.sort(result, new Comparator<Developer>() {
+			@Override
+			public int compare(Developer o1, Developer o2) {
+				return o1.getName().compareTo(o2.getName());
+			}
+		});
+		
+		i =1;
+		System.out.println("After Sort for name ----------------------------");
+		for (Developer developer : result) {
+			System.out.println(i+" : "+developer.getName()+" "+developer.getAge()+" "+developer.getPrice()+" ");
+			i++;
+		}
+		
+		//sort by salary
+		Collections.sort(result, new Comparator<Developer>() {
+			@Override
+			public int compare(Developer o1, Developer o2) {
+				return o1.getPrice().compareTo(o2.getPrice());
+			}
+		});				
+
+		i =1;
+		System.out.println("After Sort for price ----------------------------");
+		for (Developer developer : result) {
+			System.out.println(i+" : "+developer.getPrice()+" "+developer.getName()+" "+developer.getAge()+" ");
+			i++;
+		}
+		
 	}
 
 

@@ -4,11 +4,14 @@ import java.math.BigDecimal;
 
 public class Developer {
 	String name;
+	BigDecimal price;
+	
 	int age;
 
-	public Developer(String name,  int age) {
+	public Developer(String name, BigDecimal price, int age) {
 		super();
 		this.name = name;
+		this.price = price;
 		this.age = age;
 	}
 	public Developer() {
@@ -21,7 +24,13 @@ public class Developer {
 		this.name = name;
 	}
 
+	public BigDecimal getPrice() {
+		return price;
+	}
 
+	public void setPrice(BigDecimal price) {
+		this.price = price;
+	}
 
 	public int getAge() {
 		return age;
