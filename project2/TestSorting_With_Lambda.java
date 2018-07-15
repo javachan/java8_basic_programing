@@ -17,19 +17,17 @@ public class TestSorting_With_Lambda {
 		result.add(new Developer("recep", new BigDecimal("20000"), 15));
 		result.add(new Developer("neymar", new BigDecimal("30000"), 25));
 		result.add(new Developer("acun", new BigDecimal("170000"), 55));
-		result.add(new Developer("sabancý", new BigDecimal("13000"), 85));
-		result.add(new Developer("koç", new BigDecimal("11000"), 45));
+		result.add(new Developer("sabancÄ±", new BigDecimal("13000"), 85));
+		result.add(new Developer("koÃ§", new BigDecimal("11000"), 45));
 		System.out.println("Before Sort ----------------------------");
 		int i =1;
 		for (Developer developer : result) {
 			System.out.println(i+" : "+developer.getName()+" "+developer.getAge()+" "+developer.getPrice()+" ");
 			i++;
 		}
-		System.out.println("After Sort for age ----------------------------");
 		//lambda here!
+		System.out.println("After Sort for age ----------------------------");
 		result.sort((Developer o1, Developer o2)->o1.getAge()-o2.getAge());
-		
-		//java 8 only, lambda also, to print the List
 		result.forEach((developer)->System.out.println(developer.getAge()+" "+developer.getName()+" "+developer.getPrice()));
 
 		System.out.println("After Sort for name ----------------------------");
@@ -38,11 +36,6 @@ public class TestSorting_With_Lambda {
 		
 		System.out.println("After Sort for price ----------------------------");
 		result.sort((Developer o1, Developer o2)->o1.getPrice().compareTo(o2.getPrice()));
-		result.forEach((developer)->System.out.println(developer.getPrice()+" "+developer.getName()+" "+developer.getAge()));
-		
-		
-
+		result.forEach((developer)->System.out.println(developer.getPrice()+" "+developer.getName()+" "+developer.getAge()));	
 	}
-
-
 }
