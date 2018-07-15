@@ -10,7 +10,6 @@ public class TestSorting_With_Lambda {
 	public static void main(String[] args) {
 
 		List<Developer> result = new ArrayList<Developer>();
-
 		result.add(new Developer("fatih", new BigDecimal("70000"), 33));
 		result.add(new Developer("celal", new BigDecimal("80000"), 20));
 		result.add(new Developer("ronaldo", new BigDecimal("100000"), 10));
@@ -26,15 +25,15 @@ public class TestSorting_With_Lambda {
 			i++;
 		}
 		//lambda here!
-		System.out.println("After Sort for age ----------------------------");
+		System.out.println("Sorting for age ----------------------------");
 		result.sort((Developer o1, Developer o2)->o1.getAge()-o2.getAge());
 		result.forEach((developer)->System.out.println(developer.getAge()+" "+developer.getName()+" "+developer.getPrice()));
 
-		System.out.println("After Sort for name ----------------------------");
+		System.out.println("Sorting for name ----------------------------");
 		result.sort((Developer o1, Developer o2)->o1.getName().compareTo(o2.getName()));
 		result.forEach((developer)->System.out.println(developer.getName()+" "+developer.getAge()+" "+developer.getPrice()));
 		
-		System.out.println("After Sort for price ----------------------------");
+		System.out.println("Sorting for price ----------------------------");
 		result.sort((Developer o1, Developer o2)->o1.getPrice().compareTo(o2.getPrice()));
 		result.forEach((developer)->System.out.println(developer.getPrice()+" "+developer.getName()+" "+developer.getAge()));	
 	}
