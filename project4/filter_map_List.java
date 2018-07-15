@@ -19,7 +19,7 @@ public class filter_map_List {
 
 
         String name = car.stream()
-                .filter(a -> "Mazda".equals(x.getName()))
+                .filter(x -> "Mazda".equals(x.getName()))
                 .map(Car::getName)                        //convert stream to String
                 .findAny()
                 .orElse("");
