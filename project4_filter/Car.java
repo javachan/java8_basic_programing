@@ -1,4 +1,4 @@
-package Java8.project4;
+package Java8.project4_filter;
 
 public class Car {
     private String name;

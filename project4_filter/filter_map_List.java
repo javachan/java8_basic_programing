@@ -1,4 +1,4 @@
-package Java8.project4;
+package Java8.project4_filter;
 
 import java.util.Arrays;
 import java.util.List;
