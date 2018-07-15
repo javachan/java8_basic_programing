@@ -11,22 +11,22 @@ public class foreach_and_List_2 {
 		items.add("fatih");
 		items.add("bilal");
 		items.add("feride");
-		items.add("g¸l");
+		items.add("g√ºl");
 		items.add("haydar");
 		items.add("tolga");
 		items.add("zeki");
 		
 		for(String item : items){
-			System.out.print(item+" "); 	//fatih bilal feride g¸l haydar tolga zeki 
+			System.out.print(item+" "); 	//fatih bilal feride g√ºl haydar tolga zeki 
 		}
 		System.out.println("\n"); 
 		
 		
 		items.forEach(item->System.out.print(item+" "));
-		System.out.println("\n"); 			//fatih bilal feride g¸l haydar tolga zeki 
+		System.out.println("\n"); 			//fatih bilal feride g√ºl haydar tolga zeki 
 		
 		
-		items.forEach(System.out::print); 	//fatihbilalferideg¸lhaydartolgazeki
+		items.forEach(System.out::print); 	//fatihbilalferideg√ºlhaydartolgazeki
 		System.out.println("\n");
 		
 		
@@ -37,19 +37,19 @@ public class foreach_and_List_2 {
 		});
 		
 		
-        List<String> alphaUpper = new ArrayList<>();
-        for (String s : items) {
-            alphaUpper.add(s.toUpperCase());
-        }
+		List<String> alphaUpper = new ArrayList<>();
+		for (String s : items) {
+		    alphaUpper.add(s.toUpperCase());
+		}
 
-        System.out.println(items); 			//[fatih, bilal, feride, g¸l, haydar, tolga, zeki]
-        System.out.println(alphaUpper); 	//[FAT›H, B›LAL, FER›DE, G‹L, HAYDAR, TOLGA, ZEK›]
+		System.out.println(items); 			//[fatih, bilal, feride, g√ºl, haydar, tolga, zeki]
+		System.out.println(alphaUpper); 	//[FAT√ùH, B√ùLAL, FER√ùDE, G√úL, HAYDAR, TOLGA, ZEK√ù]
 
-        // Java 8
-        List<String> collect = items.stream().map(String::toUpperCase).collect(Collectors.toList());
-        
-        System.out.println(collect);		 //[FAT›H, B›LAL, FER›DE, G‹L, HAYDAR, TOLGA, ZEK›]
-		
+		// Java 8
+		List<String> collect = items.stream().map(String::toUpperCase).collect(Collectors.toList());
+
+		System.out.println(collect);		 //[FAT√ùH, B√ùLAL, FER√ùDE, G√úL, HAYDAR, TOLGA, ZEK√ù]
+
 	}
 
 }
