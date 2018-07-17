@@ -28,15 +28,15 @@ public class Stream_set_flatMap {
 		list.add(obj2);
 		list.forEach(x -> System.out.println(x.getName() + " " + x.getBook()));
 		System.out.println("--------------------------------");
-		List<String> collect = list.stream().map(x -> x.getBook()) // Stream<Set<String>>
-				.flatMap(x -> x.stream()) // Stream<String>
+		List<String> collect = list.stream().map(x -> x.getBook())	// Stream<Set<String>>
+				.flatMap(x -> x.stream())			// Stream<String>
 				.distinct().collect(Collectors.toList());
 
 		collect.forEach(x -> System.out.println(x));
 		System.out.println();
-		list.get(0).getBook().forEach(x -> System.out.println(x));
+		list.get(0).getBook().forEach(x -> System.out.println(x));  // get all books for Java_Developer
 		System.out.println();
-		list.get(1).getBook().forEach(x -> System.out.println(x));
+		list.get(1).getBook().forEach(x -> System.out.println(x));  // get all books for Python_Developer
 
 	}
 
