@@ -41,14 +41,19 @@ public class ConvertMapToList {
 
 		System.out.println("Listed Map with filter-----------------------------------------");
 
-		List<String> result5 = map.entrySet().stream().filter(x->!"Spring".equals(x.getValue())).map(x->x.getValue()).collect(Collectors.toList());
+		List<String> result5 = map.entrySet().stream()
+				.filter(x->!"Spring".equals(x.getValue()))
+				.map(x->x.getValue())
+				.collect(Collectors.toList());
 		result5.forEach(System.out::println);
 
 		System.out.println("Listed Map with multiple filter-----------------------------------------");
 
 		Map<Integer, String> fakemap=filterByValue(map, x -> (x.contains("Python") || x.contains("Hibernate")));
 
-		List<String> result6 = fakemap.entrySet().stream().map(x->x.getValue()).collect(Collectors.toList());
+		List<String> result6 = fakemap.entrySet().stream()
+				.map(x->x.getValue())
+				.collect(Collectors.toList());
 		result6.forEach(System.out::println);
 	
 	}
