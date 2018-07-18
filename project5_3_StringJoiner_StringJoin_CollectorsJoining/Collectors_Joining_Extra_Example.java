@@ -7,18 +7,18 @@ import java.util.stream.Collectors;
 public class Collectors_Joining_Extra_Example {
 
 	public static void main(String[] args) {
-        List<Car> list = Arrays.asList(
-                new Car("Ford Focus", 2005),
-                new Car("Opel Astra", 2015),
-                new Car("Toyota Corolla", 2017),
-                new Car("Renault Megane", 2013)
-        );
+		List<Car> list = Arrays.asList(
+			new Car("Ford Focus", 2005),
+			new Car("Opel Astra", 2015),
+			new Car("Toyota Corolla", 2017),
+			new Car("Renault Megane", 2013)
+		);
 
-        //{Dragon Blaze, Angry Bird, Candy Crush}
-        String result = list.stream().map(x -> x.getName())
-			.collect(Collectors.joining(", ", "{", "}"));
-        
-        System.out.println(result);
+		//{Dragon Blaze, Angry Bird, Candy Crush}
+		String result = list.stream().map(x -> x.getName())
+				.collect(Collectors.joining(", ", "{", "}"));
+
+		System.out.println(result);
 	}
 
 }
