@@ -13,24 +13,24 @@ public class ConvertToList {
         List<Integer> list1 = Arrays.stream(number).boxed().collect(Collectors.toList());
         System.out.println("list : " + list1);  // output : list : [12, 21, 34, 46, 52, 61, 72, 86, 93, 10]
         
-        String[] alphabet = new String[]{"AL›", "CELAL", "DERYA", "ACUN", "MEHMET"};
+        String[] alphabet = new String[]{"AL√ù", "CELAL", "DERYA", "ACUN", "MEHMET"};
 
         // Convert String Array to List
         List<String> list = Arrays.asList(alphabet);
 
         // A or B
-        if (list.contains("AL›") || list.contains("B›LAL")) {
-            System.out.println("1. Hello AL› or B›LAL");	// output : 1. Hello AL› or B›LAL
+        if (list.contains("AL√ù") || list.contains("B√ùLAL")) {
+            System.out.println("1. Hello AL√ù or B√ùLAL");	// output : 1. Hello AL√ù or B√ùLAL
         }
 
         // A and B
-        if (list.containsAll(Arrays.asList("AL›", "B›LAL"))) {
-            System.out.println("2. Hello AL› or B›LAL");	// don't work
+        if (list.containsAll(Arrays.asList("AL√ù", "B√ùLAL"))) {
+            System.out.println("2. Hello AL√ù or B√ùLAL");	// don't work
         }
 
         // A and C
-        if (list.containsAll(Arrays.asList("AL›", "DERYA"))) {
-            System.out.println("3. Hello AL› and DERYA");	// output : 3. Hello AL› and DERYA
+        if (list.containsAll(Arrays.asList("AL√ù", "DERYA"))) {
+            System.out.println("3. Hello AL√ù and DERYA");	// output : 3. Hello AL√ù and DERYA
         }
 
 	}
