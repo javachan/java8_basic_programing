@@ -13,12 +13,11 @@ public class Collectors_Joining_Extra_Example {
 			new Car("Toyota Corolla", 2017),
 			new Car("Renault Megane", 2013)
 		);
-
-		//{Dragon Blaze, Angry Bird, Candy Crush}
+		
 		String result = list.stream().map(x -> x.getName())
 				.collect(Collectors.joining(", ", "{", "}"));
 
-		System.out.println(result);
+		System.out.println(result);  // output : {Ford Focus, Opel Astra, Toyota Corolla}
 	}
 
 }
