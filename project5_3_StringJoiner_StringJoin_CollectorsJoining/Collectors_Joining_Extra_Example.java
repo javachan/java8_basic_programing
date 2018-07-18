@@ -17,7 +17,7 @@ public class Collectors_Joining_Extra_Example {
 		String result = list.stream().map(x -> x.getName())
 				.collect(Collectors.joining(", ", "{", "}"));
 
-		System.out.println(result);  // output : {Ford Focus, Opel Astra, Toyota Corolla}
+		System.out.println(result);  // output : {Ford Focus, Opel Astra, Toyota Corolla, Renault Megane}
 	}
 
 }
