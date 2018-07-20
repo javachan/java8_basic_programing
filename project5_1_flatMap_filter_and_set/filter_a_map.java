@@ -31,9 +31,9 @@ public class filter_a_map {
                 .filter(map -> "google.com".equals(map.getValue()))
                 .map(map -> map.getValue())
                 .collect(Collectors.joining());
+		
         //output : With Java 8 : google.com
         System.out.println("With Java 8 : " + result);
-
 
         // filter more values
         result = HOSTING.entrySet().stream()
