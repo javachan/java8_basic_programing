@@ -17,15 +17,13 @@ public class Instant_LocalDateTime {
         System.out.println("Instant : " + instant_1);		// output : Instant : 2018-07-23T11:51:33.256Z
         System.out.println("LocalDateTime : " + ldt);		// output : LocalDateTime : 2018-07-23T11:51:33.256
         
-        
+        //Current a lot of datas
         System.out.println("MonthValue : "+ldt.getMonthValue());	// output : MonthValue : 7
-        System.out.println("Year   : "+ldt.getYear());				// output : Year   : 2018
-        System.out.println("Month  : "+ldt.getMonth());				// output : Month  : JULY
+        System.out.println("Year   : "+ldt.getYear());			// output : Year   : 2018
+        System.out.println("Month  : "+ldt.getMonth());			// output : Month  : JULY
         System.out.println("Day    : "+ldt.getDayOfMonth());		// output : Day    : 23
-        System.out.println("Hour   : "+ldt.getHour());				// output : Hour   : 12
-        System.out.println("Minute : "+ldt.getMinute());			// output : Minute : 8
-        
-
+        System.out.println("Hour   : "+ldt.getHour());			// output : Hour   : 12
+        System.out.println("Minute : "+ldt.getMinute());		// output : Minute : 8
         
         LocalDateTime dateTime = LocalDateTime.of(2016, Month.AUGUST, 18, 6, 17, 10);
         // Convert LocalDateTime to Instant, UTC+0
