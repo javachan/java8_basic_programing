@@ -25,12 +25,12 @@ public class ChronoUnit_Example {
         long nano = ChronoUnit.NANOS.between(oldDate, newDate);
 
         System.out.println("years	: "+years);		// ouutput : years	: 1
-        System.out.println("months	: "+months);	// ouutput : months	: 19
+        System.out.println("months	: "+months);		// ouutput : months	: 19
         System.out.println("weeks	: "+weeks);		// ouutput : weeks	: 85
         System.out.println("days	: "+days);		// ouutput : days	: 598
         System.out.println("hours	: "+hours);		// ouutput : hours	: 14352
-        System.out.println("minutes : "+minutes);	// ouutput : minutes : 861121
-        System.out.println("seconds : "+seconds);	// ouutput : seconds : 51667261
+        System.out.println("minutes	: "+minutes);		// ouutput : minutes	: 861121
+        System.out.println("seconds	: "+seconds);		// ouutput : seconds	: 51667261
         System.out.println("milis 	: "+milis);		// ouutput : milis 	: 51667261000
         System.out.println("nano	: "+nano);		// ouutput : nano	: 51667261000000000
 	}
