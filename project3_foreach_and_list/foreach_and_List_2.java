@@ -17,19 +17,20 @@ public class foreach_and_List_2 {
 		items.add("zeki");
 		
 		for(String item : items){
-			System.out.print(item+" "); 	//fatih bilal feride gül haydar tolga zeki 
+			System.out.print(item+" "); 	// output : fatih bilal feride gül haydar tolga zeki 
 		}
-		System.out.println("\n"); 
-		
+		System.out.println("\n"); 		
+	
 		items.forEach(item->System.out.print(item+" "));
-		System.out.println("\n"); 		//fatih bilal feride gül haydar tolga zeki 
+		System.out.println("\n"); 	// output : fatih bilal feride gül haydar tolga zeki 
 		
-		items.forEach(System.out::print); 	//fatihbilalferidegülhaydartolgazeki
-		System.out.println("\n");
+		items.forEach(System.out::print); 		
+		System.out.println("\n");	// output : fatihbilalferidegülhaydartolgazeki
 		
+		// output : haydar
 		items.forEach(item->{
 			if("haydar".equals(item)){
-				System.out.println(item); 	//haydar
+				System.out.println(item); 	
 			}
 		});
 		
@@ -38,13 +39,13 @@ public class foreach_and_List_2 {
 		    alphaUpper.add(s.toUpperCase());
 		}
 
-		System.out.println(items); 		//[fatih, bilal, feride, gül, haydar, tolga, zeki]
-		System.out.println(alphaUpper); 	//[FATİH, BİLAL, FERİDE, GÜL, HAYDAR, TOLGA, ZEKİ]
+		System.out.println(items); 	// output : [fatih, bilal, feride, gül, haydar, tolga, zeki]
+		System.out.println(alphaUpper); // output : [FATİH, BİLAL, FERİDE, GÜL, HAYDAR, TOLGA, ZEKİ]
 
 		// Java 8
 		List<String> collect = items.stream().map(String::toUpperCase).collect(Collectors.toList());
 
-		System.out.println(collect);		 //[FATİÝH, BİLAL, FERİDE, GÜL, HAYDAR, TOLGA, ZEKİ]
+		System.out.println(collect);	// output : [FATİÝH, BİLAL, FERİDE, GÜL, HAYDAR, TOLGA, ZEKİ]
 
 	}
 
