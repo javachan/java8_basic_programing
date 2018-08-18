@@ -10,11 +10,12 @@ public class How_To_Use_List {
         
 		int[] number = {12, 21, 34, 46, 52, 61, 72, 86, 93, 10};
 		List<Integer> list1 = Arrays.stream(number).boxed().collect(Collectors.toList());
-		System.out.println("list : " + list1);  // output : list : [12, 21, 34, 46, 52, 61, 72, 86, 93, 10]
+		
+		// output : list : [12, 21, 34, 46, 52, 61, 72, 86, 93, 10]
+		System.out.println("list : " + list1);  
 
 		String[] alphabet = new String[]{"ALİ", "CELAL", "DERYA", "ACUN", "MEHMET"};
 
-		// Convert String Array to List
 		List<String> list = Arrays.asList(alphabet);
 
 		if (list.contains("ALİ") || list.contains("BİLAL")) {
