@@ -1,9 +1,9 @@
 ## java8_programing_example
 ``` 
-- project1 : Counting, Shorting, Group by
-- project2 : Shorting with Collections and Lambda
-- project3 : How to use list with java8
-- project4 : Filter collect, filter map, stream map with list
+- project1   : Counting, Shorting, Group by
+- project2   : Shorting with Collections and Lambda
+- project3   : How to use list with java8
+- project4   : Filter collect, filter map, stream map with list
 - project5.1 : Filter map, convert map to list
 - project5.2 : How to use optional and optional filter
 - project5.3 : How to use StringJoiner, StringJoin, Collectors Joining. Collectors Joining extra example
