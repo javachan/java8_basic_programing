@@ -16,16 +16,19 @@ public class foreach_and_List_2 {
 		items.add("tolga");
 		items.add("zeki");
 		
+		// output : fatih bilal feride gül haydar tolga zeki 
 		for(String item : items){
-			System.out.print(item+" "); 	// output : fatih bilal feride gül haydar tolga zeki 
+			System.out.print(item+" "); 
 		}
 		System.out.println("\n"); 		
 	
+		// output : fatih bilal feride gül haydar tolga zeki 
 		items.forEach(item->System.out.print(item+" "));
-		System.out.println("\n"); 	// output : fatih bilal feride gül haydar tolga zeki 
+		System.out.println("\n"); 	
 		
+		// output : fatihbilalferidegülhaydartolgazeki
 		items.forEach(System.out::print); 		
-		System.out.println("\n");	// output : fatihbilalferidegülhaydartolgazeki
+		System.out.println("\n");	
 		
 		// output : haydar
 		items.forEach(item->{
