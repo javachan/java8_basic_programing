@@ -20,18 +20,18 @@ public class filter_map_List {
 		//filter example
 		String name = car.stream()
 			.filter(x -> "Mazda".equals(x.getName()))
-			.map(Car::getName)                        //convert stream to String
+			.map(Car::getName)			//convert stream to String
 			.findAny()
 			.orElse("");
 
-		System.out.println("name : " + name);             // output : name : Mazda
-		
+		System.out.println("name : " + name);		// output : name : Mazda
 		
 		List<String> collect = car.stream()
 			.map(Car::getName)
 			.collect(Collectors.toList());
 
 		collect.forEach(System.out::println);		// output : Opel Mazda peugeot ferrari Mercedes
+		
 	}
 
 }
