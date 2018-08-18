@@ -34,7 +34,7 @@ public class Stream_set_flatMap {
 
 		collect.forEach(x -> System.out.println(x));
 		System.out.println();
-		list.get(0).getBook().forEach(x -> System.out.println(x));  // get all books for Java_Developer
+		list.get(0).getBook().forEach(x -> System.out.println(x));	// get all books for Java_Developer
 		System.out.println();
 		list.get(1).getBook().forEach(x -> System.out.println(x));	// get all books for Python_Developer
 
