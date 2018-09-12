@@ -19,6 +19,7 @@ public class TestSorting_With_Lambda {
 		result.add(new Developer("sabancı", new BigDecimal("13000"), 85));
 		result.add(new Developer("koç", new BigDecimal("11000"), 45));
 		System.out.println("Before Sort ----------------------------");
+		
 		int i =1;
 		for (Developer developer : result) {
 			System.out.println(i+" : "+developer.getName()+" "+developer.getAge()+" "+developer.getPrice()+" ");
