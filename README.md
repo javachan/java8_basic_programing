@@ -1,4 +1,4 @@
-## java8_simple_example
+## java8_simple_examples
 ``` 
 - project1   : Counting, Shorting, Group by
 - project2   : Shorting with Collections and Lambda
